@@ -13,8 +13,9 @@ RUN apt update && apt install -y software-properties-common &&\
 # Installing packages from requirements.txt
 RUN apt install -y python3-django
 
+WORKDIR /app
+
 # Copying the project
 COPY . /app
 
-WORKDIR /app
 
